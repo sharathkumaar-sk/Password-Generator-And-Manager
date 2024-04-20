@@ -20,8 +20,10 @@ This script serves as a password manager application that allows users to genera
   
 
 ## Output
-![22](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/b2fc5c10-9e25-4a58-a0da-51301ec6c45b)
-![33](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/27dc97f8-de24-4120-9761-b4d55de9b571)
+![22](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/eecc5f45-7a15-4441-9f96-828a1af7114f)
+![33](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/04679edf-5244-4939-842e-a3d9c2e1e0b2)
+
+
 
 
 ## Getting Started
