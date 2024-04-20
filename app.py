@@ -11,6 +11,11 @@ from prettytable import PrettyTable
 from cryptography.fernet import Fernet
 import os
 
+localhost=""
+User_Name=""
+User_Password=""
+Database_Name=""
+
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -80,10 +85,10 @@ def dis_password():
     try:
         # Establish database connection
         connection = mysql.connector.connect(
-            host="localhost",
-            user="UserName",
-            password="User_Password",
-            database="Database_Name"
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
         )
 
         if connection.is_connected():
@@ -138,10 +143,10 @@ def save_password(app_name, username, password):
         encrypted_password = encrypt_password(password, key)
 
         connection = mysql.connector.connect(
-            host="localhost",
-            user="UserName",
-            password="User_Password",
-            database="Database_Name"
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
         )
         
         cursor = connection.cursor()
@@ -196,10 +201,10 @@ def edit_password():
     try:
         # Establish database connection
         connection = mysql.connector.connect(
-            host="localhost",
-            user="UserName",
-            password="User_Password",
-            database="Database_Name"
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
         )
 
         cursor = connection.cursor()
@@ -273,10 +278,10 @@ def delete_password():
         if conf == "y":
             # Establish database connection
             connection = mysql.connector.connect(
-                host="localhost",
-                user="UserName",
-                password="User_Password",
-                database="Database_Name"
+                host=localhost,
+                user=User_Name,
+                password=User_Password,
+                database=Database_Name
             )
 
             cursor = connection.cursor()
@@ -324,10 +329,10 @@ def search_password():
         
         # Establish database connection
         connection = mysql.connector.connect(
-            host="localhost",
-            user="UserName",
-            password="User_Password",
-            database="Database_Name"
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
         )
 
         cursor = connection.cursor()
@@ -377,10 +382,10 @@ def export_passwords():
         file_extension = filename.split(".")[-1].lower()
         # Establish database connection
         connection = mysql.connector.connect(
-            host="localhost",
-            user="UserName",
-            password="User_Password",
-            database="Database_Name"
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
         )
 
         cursor = connection.cursor()
