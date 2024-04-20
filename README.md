@@ -59,16 +59,14 @@ Avoid using the root user for application access.
   
 **Connect to Database**
 - Connecting to the Database in app.py (Secure Method)
-- Replace all the placeholder values in app.py with your actual database credentials. Avoid hardcoding sensitive information directly into the code to enhance security.
+- Replace the empty strings in app.py with your actual database credentials. Avoid hardcoding sensitive information directly into the code to enhance security.
 ```bash
-connection = mysql.connector.connect(
-    host = "localhost"  # Replace with your database host address
-    user = "UserName"  # Replace with your database username
-    password = "User_Password"  # Replace with your database password
-    database = "Database_Name"  # Replace with your database name
-)
+localhost= ""     # Replace with your database host address
+User_Name=""      # Replace with your database username
+User_Password=""  # Replace with your database password
+Database_Name= "" # Replace with your database name
+
 ```
-- Use find and replace method or create a global variable with actual database credentials at the begining of the code.
 - Save the changes to app.py.
 
 ### Install Dependencies
@@ -83,6 +81,8 @@ python app.py
 ```
 
 Follow the on-screen instructions to generate passwords, manage your password database, and utilize export functionalities.
+
+
 
 
 **Contributing:**
