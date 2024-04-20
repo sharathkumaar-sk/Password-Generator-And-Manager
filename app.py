@@ -81,9 +81,9 @@ def dis_password():
         # Establish database connection
         connection = mysql.connector.connect(
             host="localhost",
-            user="pu1",
-            password="c7(x])Vvr9@OP6r6",
-            database="pmanager"
+            user="UserName",
+            password="User_Password",
+            database="Database_Name"
         )
 
         if connection.is_connected():
@@ -139,9 +139,9 @@ def save_password(app_name, username, password):
 
         connection = mysql.connector.connect(
             host="localhost",
-            user="pu1",
-            password="c7(x])Vvr9@OP6r6",
-            database="pmanager"
+            user="UserName",
+            password="User_Password",
+            database="Database_Name"
         )
         
         cursor = connection.cursor()
@@ -197,9 +197,9 @@ def edit_password():
         # Establish database connection
         connection = mysql.connector.connect(
             host="localhost",
-            user="pu1",
-            password="c7(x])Vvr9@OP6r6",
-            database="pmanager"
+            user="UserName",
+            password="User_Password",
+            database="Database_Name"
         )
 
         cursor = connection.cursor()
@@ -274,9 +274,9 @@ def delete_password():
             # Establish database connection
             connection = mysql.connector.connect(
                 host="localhost",
-                user="pu1",
-                password="c7(x])Vvr9@OP6r6",
-                database="pmanager"
+                user="UserName",
+                password="User_Password",
+                database="Database_Name"
             )
 
             cursor = connection.cursor()
@@ -325,9 +325,9 @@ def search_password():
         # Establish database connection
         connection = mysql.connector.connect(
             host="localhost",
-            user="pu1",
-            password="c7(x])Vvr9@OP6r6",
-            database="pmanager"
+            user="UserName",
+            password="User_Password",
+            database="Database_Name"
         )
 
         cursor = connection.cursor()
@@ -378,9 +378,9 @@ def export_passwords():
         # Establish database connection
         connection = mysql.connector.connect(
             host="localhost",
-            user="pu1",
-            password="c7(x])Vvr9@OP6r6",
-            database="pmanager"
+            user="UserName",
+            password="User_Password",
+            database="Database_Name"
         )
 
         cursor = connection.cursor()
