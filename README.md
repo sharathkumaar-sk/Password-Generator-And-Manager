@@ -23,15 +23,15 @@ This script serves as a password manager application that allows users to genera
   
 
 ## Output
-<img src="https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/eecc5f45-7a15-4441-9f96-828a1af7114f" width="400" height="300" />
-
-<img src="https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/04679edf-5244-4939-842e-a3d9c2e1e0b2" width="400" height="300" />
+![22](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/e68c3052-c714-4759-a233-f71f9a35d74e)
+![33](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/00faf64c-54ec-4da6-b424-2e50c551bcad)
 
 
 ## Getting Started
 
 ### Prerequisites
 Python 3.x installed (Download Python)
+
 
 
 Text editor or IDE of your choice (List of Source Code Editors)
