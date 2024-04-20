@@ -5,7 +5,7 @@
 This script serves as a password manager application that allows users to generate, manage, and export passwords securely. It utilizes encryption techniques to store passwords in a database, ensuring confidentiality and security. Users can perform various operations such as generating passwords, viewing, editing, deleting, searching for passwords, and exporting password data in different formats like CSV, PDF, and SQLite database.
 
 <p align="center">
-  <img src="https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/eef09cd1-0290-4f6f-b368-b69e44cb9d3d" width="300" height="200" />
+  <img src="https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/eef09cd1-0290-4f6f-b368-b69e44cb9d3d" width="400" height="300" />
 </p>
 
 ## Key Features
@@ -23,10 +23,9 @@ This script serves as a password manager application that allows users to genera
   
 
 ## Output
-![22](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/eecc5f45-7a15-4441-9f96-828a1af7114f)
-![33](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/04679edf-5244-4939-842e-a3d9c2e1e0b2)
+<img src="https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/eecc5f45-7a15-4441-9f96-828a1af7114f" width="400" height="300" />
 
-
+<img src="https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/04679edf-5244-4939-842e-a3d9c2e1e0b2" width="400" height="300" />
 
 
 ## Getting Started
