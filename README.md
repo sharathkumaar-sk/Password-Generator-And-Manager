@@ -17,6 +17,11 @@ This script serves as a password manager application that allows users to genera
 - Secure Database Storage: Passwords are stored securely in a MySQL database, safeguarding sensitive information against unauthorized access.
 - Modular Design: The script is organized into functions and modules, promoting code reusability, readability, and maintainability.
 - Main Menu Navigation: Users can easily navigate between different functionalities using the main menu, providing a seamless user experience.
+  
+
+## Output
+![22](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/b2fc5c10-9e25-4a58-a0da-51301ec6c45b)
+![33](https://github.com/sharathkumaar-sk/Password-Generator-And-Manager/assets/163333516/27dc97f8-de24-4120-9761-b4d55de9b571)
 
 
 ## Getting Started
