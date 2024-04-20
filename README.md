@@ -17,134 +17,78 @@ This script serves as a password manager application that allows users to genera
 - Secure Database Storage: Passwords are stored securely in a MySQL database, safeguarding sensitive information against unauthorized access.
 - Modular Design: The script is organized into functions and modules, promoting code reusability, readability, and maintainability.
 - Main Menu Navigation: Users can easily navigate between different functionalities using the main menu, providing a seamless user experience.
-Getting Started
-Prerequisites
+
+
+## Getting Started
+
+### Prerequisites
 Python 3.x installed (Download Python)
+
+
 Text editor or IDE of your choice (List of Source Code Editors)
-Installation
+
+
+### Installation
+
 Clone the Repository:
-bash
-Copy code
-git clone https://github.com/your-username/password-manager.git
-Install Dependencies:Navigate to the project directory and install the required libraries using pip:
-bash
-Copy code
-cd password-manager
-pip install -r requirements.txt
-Usage
-Run the application:
+```bash
+git clone [https://github.com/sharathkumaar/Password-Generator_And_Manager.git]
+```
 
-bash
-Copy code
-python password_manager.py
-Follow the on-screen instructions to generate passwords, manage your password database, and utilize export functionalities.
+### Setup Database
 
-Contributing
-We welcome your contributions! If you'd like to enhance this project, follow these steps:
-
-Fork the Repository: Create a copy of the repository on your GitHub account.
-Make Changes: Implement your desired improvements and modifications.
-Submit a Pull Request: Share your code changes with the project maintainers for review and potential integration.
-License
-This project is distributed under the permissive MIT License. Refer to the LICENSE file for the full terms and conditions.
-
-Database Setup (External to app.py)
-Create MySQL Database
-Access your MySQL server administration tool (e.g., phpMyAdmin, MySQL Workbench).
-Create a new database and name it appropriately (e.g., password_manager).
-Create passwords Table
-Within the newly created database, execute the following SQL statement to create the passwords table:
-
-sql
-Copy code
+**Create MySQL Database**
+- Access your MySQL server administration tool (e.g., phpMyAdmin, MySQL Workbench).
+- Create a new database and name it appropriately (e.g., password_manager).
+- Create passwords Table Within the newly created database, execute the following SQL statement to create the passwords table:
+```bash
 CREATE TABLE IF NOT EXISTS passwords (
     id INT AUTO_INCREMENT PRIMARY KEY,
     app_name VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
-    password_hash BLOB NOT NULL,  -- Use a secure hashing algorithm for password storage
+    password_hash BLOB NOT NULL,
     `key` VARCHAR(255) NOT NULL
 );
-Explanation:
-
-id: Auto-incrementing integer for unique identification (primary key).
-app_name: Stores the name of the application the credentials belong to (e.g., "Gmail", "Social Media Platform").
-username: Username associated with the application.
-password_hash: Stores the securely hashed password using a strong hashing algorithm like bcrypt (never store passwords in plain text).
-key: An optional field that can be used to store additional security information (e.g., encryption key for password decryption).
-Create Database User
-Create a new user specifically for the password manager application and grant it the necessary privileges.
+```
+**Create Database User**
+- Create a new user specifically for the password manager application and grant it the necessary privileges.
 Important:
-
 Avoid using the root user for application access.
-Grant privileges on the password_manager database (e.g., SELECT, INSERT, UPDATE, DELETE) to this new user.
-Assign a strong password to the newly created user and store it securely (avoid hardcoding passwords in code).
-Connecting to the Database in app.py (Secure Method)
-Environment Variables:
+- Grant privileges on the password_manager database (e.g., SELECT, INSERT, UPDATE, DELETE) to this new user.
+- Assign a strong password to the newly created user and store it securely (avoid hardcoding passwords in code).
+  
+**Connect to Database**
+- Connecting to the Database in app.py (Secure Method)
+- Replace all the placeholder values in app.py with your actual database credentials. Avoid hardcoding sensitive information directly into the code to enhance security.
+```bash
+connection = mysql.connector.connect(
+    host = "localhost"  # Replace with your database host address
+    user = "UserName"  # Replace with your database username
+    password = "User_Password"  # Replace with your database password
+    database = "Database_Name"  # Replace with your database name
+)
+```
+- Use find and replace method or create a global variable with actual database credentials at the begining of the code.
+- Save the changes to app.py.
 
-Highly recommended: Store database credentials (username, password) as environment variables to improve security and avoid hardcoding them in your code.
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Use a tool like dotenv to manage environment variables.
+### Run the Script
 
-Here's an example structure for app.py:
+```bash
+python app.py
+```
 
-python
-Copy code
-import os
-from dotenv import load_dotenv
+Follow the on-screen instructions to generate passwords, manage your password database, and utilize export functionalities.
 
-# Load environment variables from .env file
-load_dotenv()
 
-host = os.getenv("DB_HOST", "localhost")  # Optional default value
-user = os.getenv("DB_USER")
-password = os.getenv("DB_PASSWORD")
-database = os.getenv("DB_NAME")
-Secure Connection:
+**Contributing:**
 
-Import the necessary libraries (e.g., mysql.connector) for connecting to MySQL.
-Use a prepared statement approach to prevent SQL injection vulnerabilities.
-Here's an improved version assuming you're using mysql.connector:
+We welcome contributions! Please feel free to submit pull requests or open issues for any enhancements or bug fixes.
 
-python
-Copy code
-import mysql.connector
+**License:**
 
-def connect_to_database():
-    try:
-        cnx = mysql.connector.connect(
-            host=host,
-            user=user,
-            password=password,
-            database=database
-        )
-        return cnx
-    except mysql.connector.Error as err:
-        print("Error connecting to database:", err)
-        return None
-
-# Example usage:
-cnx = connect_to_database()
-# ... your database interaction code ...
-cnx.close()  # Close the connection after use
-Find-and-Replace Approach (Less Secure, Use with Caution)
-
-Warning: This approach is less secure than environment variables and should only be used if absolutely necessary (e.g., local development). Exposing database credentials in code could lead to security breaches.
-
-Create a Configuration File (config.py):
-
-Store the database credentials in a separate file.
-
-python
-Copy code
-host = "localhost"
-user = "your_username"
-password = "your_password"
-database = "password_manager"
-Find-and-Replace in app.py:
-
-Use string manipulation (e.g., replace) to update the connection parameters.
-
-python
-Copy code
-# config.py (assumed to be in the same directory)
-from config import host, user, password, database
+This project is licensed under the MIT License. See the LICENSE file for details.
