@@ -13,9 +13,9 @@ import os
 import stdiomask
 
 localhost="localhost"
-User_Name="pmanager"
-User_Password="121212"
-Database_Name="pmanager"
+User_Name=""
+User_Password=""
+Database_Name="Database_Name"
 authenticated = False
 
 def authenticate_user():
