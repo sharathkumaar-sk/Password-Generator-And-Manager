@@ -71,8 +71,8 @@ Avoid using the root user for application access.
 - Replace the empty strings in app.py with your actual database credentials. Avoid hardcoding sensitive information directly into the code to enhance security.
 ```bash
 localhost= ""     # Replace with your database host address
-User_Name=""      # Replace with your database username
-User_Password=""  # Replace with your database password
+User_Name=""      # Leave empty
+User_Password=""  # Leave empty
 Database_Name= "" # Replace with your database name
 
 ```
