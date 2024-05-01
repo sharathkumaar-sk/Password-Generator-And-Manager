@@ -12,10 +12,10 @@ from cryptography.fernet import Fernet
 import os
 import stdiomask
 
-localhost="localhost"
+localhost=""
 User_Name=""
 User_Password=""
-Database_Name="Database_Name"
+Database_Name=""
 authenticated = False
 
 def authenticate_user():
