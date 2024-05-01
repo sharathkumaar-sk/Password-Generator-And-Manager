@@ -10,11 +10,57 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from prettytable import PrettyTable
 from cryptography.fernet import Fernet
 import os
+import stdiomask
 
-localhost=""
-User_Name=""
-User_Password=""
-Database_Name=""
+localhost="localhost"
+User_Name="pmanager"
+User_Password="121212"
+Database_Name="pmanager"
+authenticated = False
+
+def authenticate_user():
+    global User_Name, User_Password
+    print("\n\t\t\t\t\t\tWelcome To Password Genrator And Manager\n")
+    User_Name = input("Enter your database username: ")
+    User_Password = stdiomask.getpass("Enter your database password: ", mask='*')
+
+    try:
+        # Establish database connection for authentication
+        connection = mysql.connector.connect(
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
+        )
+        authenticated = connection.is_connected()
+        return authenticated
+    except mysql.connector.Error as e:
+        clear_screen()
+        print(f"Authentication failed: {e}")
+        authenticated=False
+        return False
+
+def authenticate_user2():
+    global User_Name, User_Password
+    print("\n\t\t\t\t\t\tEXPORT PASSWORD\n")
+    User_Name = input("Enter your database username: ")
+    User_Password = stdiomask.getpass("Enter your database password: ", mask='*')
+
+    try:
+        # Establish database connection for authentication
+        connection = mysql.connector.connect(
+            host=localhost,
+            user=User_Name,
+            password=User_Password,
+            database=Database_Name
+        )
+        authenticated = connection.is_connected()
+        return authenticated
+    except mysql.connector.Error as e:
+        clear_screen()
+        print(f"Authentication failed: {e}")
+        authenticated=False
+        return False
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -374,6 +420,10 @@ def search_password():
 
 def export_passwords():
     clear_screen()
+    authenticated = False
+    while not authenticated:
+        authenticated = authenticate_user2()
+    clear_screen()
     print("\n\t\t\t\t\tEXPORT PASSWORDS\n")
     try:
         filename = input("Enter a file name to export as (Example.txt, Example.csv, Example.pdf, Example.db): ")
@@ -525,6 +575,9 @@ def export_passwords():
     input("\nPress Enter to return to the Manage Passwords menu...")
     
 def main_menu():
+    global authenticated
+    while not authenticated:
+        authenticated = authenticate_user()
     while True:
         clear_screen()
         print("\n\t\t\t\t\t\tMAIN MENU\n")
