@@ -89,6 +89,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
+Enter the username and password of the database that you created. These username and password also required to export the password.
 Follow the on-screen instructions to generate passwords, manage your password database, and utilize export functionalities.
 
 
