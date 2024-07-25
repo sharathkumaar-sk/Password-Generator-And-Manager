@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS passwords (
     id INT AUTO_INCREMENT PRIMARY KEY,
     app_name VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
-    password_hash BLOB NOT NULL,
+    password_eny BLOB NOT NULL,
     `key` VARCHAR(255) NOT NULL
 );
 ```
